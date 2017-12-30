@@ -1,0 +1,159 @@
+.headerlogo {
+    // display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.site-header {
+    padding: 0 15px 0 15px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: $navbar-color;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 0 0 0;
+}
+
+.navbar {
+    // display: inline-block;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+
+.nav-item {
+    display: inline-block;
+    text-transform: uppercase;
+    border-right: 1px solid;
+    padding: 0 7px 0 0;
+
+    &:last-child {
+        border: 0;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 10px;
+
+        &:visited {
+            text-decoration: none;
+        }
+    }
+}
+
+
+.nav-text {
+    display: inline-block;
+    vertical-align: top;
+
+    padding: 0 40px 0 0;
+    position: absolute;
+    right: 20px;
+
+
+
+    p {
+        // padding: 0px;
+        margin: 0px;
+        text-align: right;
+
+        &.small-text {
+            font-size: 7px;
+            text-transform: uppercase;
+        }
+
+        &.phone {
+            padding: 17px 0 0 0;
+            font-size: 17px;
+        }
+    }
+}
+
+
+
+.menu__icon {
+    display: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    cursor: pointer;
+    background: $menubutton-color;
+    right: 35px;
+    top: 10px;
+
+    span {
+        display: block;
+        position: relative;
+        height: 3px;
+        width: 17px;
+        background: white;
+        border-radius: 1px;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        margin: 2px auto;
+
+        &:nth-child(1) {
+            margin-top: 11px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-small) {}
+
+@media (max-width: $breakpoint-tablet) {
+    .headerlogo {
+        img {
+            width: 215px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-desktop) {
+    .headerlogo {
+        img {
+            width: 260px;
+        }
+    }
+    nav {
+        width: 100%;
+    }
+
+    .navbar {
+        display: none;
+        width: 100%;
+        position: absolute;
+    }
+
+
+
+    .nav-item {
+        display: block;
+        border: none;
+        width: 100%;
+        border-bottom: 1px dotted black;
+        .nav-link {
+            text-align: center;
+        }
+    }
+
+    .nav-text {
+        position: absolute;
+        vertical-align: baseline;
+        right: unset;
+        left: 50%;
+        top: 0;
+    }
+
+    .menu__icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
